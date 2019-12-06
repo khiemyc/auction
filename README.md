@@ -5,10 +5,6 @@ WebSite cho phép khách hàng tham gia đấu giá các sản phầm như oto, 
 - [Giới thiệu](#Giới-thiệu)
 - [Thành viên](#Thành-viên)
 - [Công cụ](#Công-cụ)
-- [Cấu trúc Database](#Cấu-trúc-Database)
-- [Kiến trúc](#Kiến-trúc)
-- [Cài đặt](#Cài-đặt)
-
 
 ## Giới thiệu
 Website cho phép người quản trị đăng các sản phẩm lên web, mở các phiên đấu giá
@@ -33,10 +29,26 @@ Project sử dụng các công cụ:
 ## Cấu trúc Database
 Cấu trúc các bảng trong database của project
 
-<iframe width="560" height="315" src='https://dbdiagram.io/embed/5de4bc7eedf08a25543e95a9'> </iframe>
+https://dbdiagram.io/d/5de4bc7eedf08a25543e95a9
 
 ## Cài đặt
+
 Repositories này chứa phần BackEnd của project bao gồm các Rest API.
+
+    //GetCategoriesAll
+	r.GET("/GetAllCategories", controller.GetCategoriesAll)
+	//GetAllAuctionHistory
+	r.GET("/GetAllAuctionHistory", controller.GetAuctionHistoryAll)
+	//GetAllProduct
+	r.GET("/GetAllProduct", controller.GetAllProduct)
+	//GetAllUser
+	r.GET("/GetAllUser", controller.GetAllUser)
+	//AddUser
+	r.POST("/UserAdd", controller.AddUser)
+	//UpdateUser
+	r.POST("/UserUpdate", controller.UpdateUser)
+	//DeleteUser
+	r.POST("/UserDelete", controller.DeleteUser)
 
 2. Cài đặt các thư viện cần thiết
 ```sh
