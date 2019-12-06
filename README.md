@@ -30,7 +30,7 @@ Project sử dụng các công cụ:
 Cấu trúc các bảng trong database của project
 
 <br>
-<img src="https://scontent.fhan3-1.fna.fbcdn.net/v/t1.0-9/78904912_588274935312008_6014814570894327808_n.png?_nc_cat=110&_nc_ohc=XkvlE0pW-i8AQk_yKXvFU_COCQUgNzZLU_yM0KyTJuG4Ui_wl4Lz9u3uA&_nc_ht=scontent.fhan3-1.fna&oh=f1cf8a86bfa0241dc8e923875f1d5510&oe=5E6B245E" title="source: imgur.com"  />
+<img src="https://scontent.fhan2-2.fna.fbcdn.net/v/t1.0-9/78904067_588444328628402_440389565526573056_n.png?_nc_cat=110&_nc_ohc=j4wvR9ItGnQAQkP_0i7ccBXgJRi-8Q0FbPy5ek2ar1hyCOSA9ueb9Dv_g&_nc_ht=scontent.fhan2-2.fna&oh=9346e89ea633995b39a7ccd8d85f00a9&oe=5E89D543" title="source: imgur.com"  />
 <br>
 ## Cài đặt
 

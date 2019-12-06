@@ -59,6 +59,13 @@ func GetCategoriesAll(c *gin.Context) {
 	c.JSON(200, catergorysAll)
 }
 
+// func AddProduct(c *gin.Context) {
+// 	db := GetDBInstance().Db
+// 	db.LogMode(true)
+// 	var Product []model.Product
+
+// }
+
 //GetAuctionHistoryAll ...GET all
 //AuctionHistoryAll ...Get all
 // @Description Get tất cả dữ liệu ở bảng AuctionHistoryAll trả về  Json

@@ -36,6 +36,7 @@ type Product struct {
 	ProductImage string    `form:"user" json:"ProductImage" binding:"required"`
 	CategoriesID int       `form:"user" json:"CategoriesID" binding:"required"`
 	PriceStart   int       `form:"user" json:"PriceStart" binding:"required"`
+	PriceNow     int       `form:"user" json:"PriceNow" binding:"required"`
 	StartTime    time.Time `form:"user" json:"StartTime" binding:"required"`
 	EndTime      time.Time `form:"user" json:"EndTime" binding:"required"`
 	Status       bool      `form:"user" json:"Status" binding:"required"`
