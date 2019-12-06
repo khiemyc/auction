@@ -1,0 +1,200 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a sample server Petstore server.",
+        "title": "Swagger Example API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "API Support",
+            "url": "http://www.swagger.io/support",
+            "email": "support@swagger.io"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "host": "petstore.swagger.io",
+    "basePath": "/v2",
+    "paths": {
+        "/GetAllAuctionHistory": {
+            "get": {
+                "description": "Get tất cả dữ liệu ở bảng AuctionHistoryAll trả về  Json",
+                "consumes": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.AuctionHistory"
+                        }
+                    }
+                }
+            }
+        },
+        "/GetAllCategories": {
+            "get": {
+                "description": "Get tất cả dữ liệu ở bảng Categories trả về  Json",
+                "consumes": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.Categorie"
+                        }
+                    }
+                }
+            }
+        },
+        "/GetAllProduct": {
+            "get": {
+                "description": "Get tất cả dữ liệu ở bảng GetProductAll trả về  Json",
+                "consumes": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.Product"
+                        }
+                    }
+                }
+            }
+        },
+        "/GetAllUser": {
+            "get": {
+                "description": "Get tất cả dữ liệu ở bảng GetUserAll trả về  Json",
+                "consumes": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/model.User"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "model.AuctionHistory": {
+            "type": "object",
+            "properties": {
+                "biddingPrice": {
+                    "type": "integer"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "productId": {
+                    "type": "integer"
+                },
+                "timeToBid": {
+                    "type": "string"
+                },
+                "userId": {
+                    "type": "integer"
+                }
+            }
+        },
+        "model.Categorie": {
+            "type": "object",
+            "properties": {
+                "NameCategories": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "model.Product": {
+            "type": "object",
+            "required": [
+                "CategoriesID",
+                "Description",
+                "EndTime",
+                "PriceStart",
+                "ProductImage",
+                "ProductName",
+                "StartTime",
+                "Status"
+            ],
+            "properties": {
+                "CategoriesID": {
+                    "type": "integer"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                "EndTime": {
+                    "type": "string"
+                },
+                "PriceStart": {
+                    "type": "integer"
+                },
+                "ProductImage": {
+                    "type": "string"
+                },
+                "ProductName": {
+                    "type": "string"
+                },
+                "StartTime": {
+                    "type": "string"
+                },
+                "Status": {
+                    "type": "boolean"
+                },
+                "id": {
+                    "type": "integer"
+                }
+            }
+        },
+        "model.User": {
+            "type": "object",
+            "required": [
+                "Email",
+                "FisrtName",
+                "Id",
+                "LastName",
+                "Password",
+                "Phone",
+                "Role",
+                "Wallet"
+            ],
+            "properties": {
+                "Email": {
+                    "type": "string"
+                },
+                "FisrtName": {
+                    "type": "string"
+                },
+                "Id": {
+                    "type": "integer"
+                },
+                "LastName": {
+                    "type": "string"
+                },
+                "Password": {
+                    "type": "string"
+                },
+                "Phone": {
+                    "type": "string"
+                },
+                "Role": {
+                    "type": "boolean"
+                },
+                "Wallet": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

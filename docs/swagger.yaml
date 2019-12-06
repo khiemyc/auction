@@ -1,0 +1,135 @@
+basePath: /v2
+definitions:
+  model.AuctionHistory:
+    properties:
+      biddingPrice:
+        type: integer
+      id:
+        type: integer
+      productId:
+        type: integer
+      timeToBid:
+        type: string
+      userId:
+        type: integer
+    type: object
+  model.Categorie:
+    properties:
+      NameCategories:
+        type: string
+      id:
+        type: integer
+    type: object
+  model.Product:
+    properties:
+      CategoriesID:
+        type: integer
+      Description:
+        type: string
+      EndTime:
+        type: string
+      PriceStart:
+        type: integer
+      ProductImage:
+        type: string
+      ProductName:
+        type: string
+      StartTime:
+        type: string
+      Status:
+        type: boolean
+      id:
+        type: integer
+    required:
+    - CategoriesID
+    - Description
+    - EndTime
+    - PriceStart
+    - ProductImage
+    - ProductName
+    - StartTime
+    - Status
+    type: object
+  model.User:
+    properties:
+      Email:
+        type: string
+      FisrtName:
+        type: string
+      Id:
+        type: integer
+      LastName:
+        type: string
+      Password:
+        type: string
+      Phone:
+        type: string
+      Role:
+        type: boolean
+      Wallet:
+        type: integer
+    required:
+    - Email
+    - FisrtName
+    - Id
+    - LastName
+    - Password
+    - Phone
+    - Role
+    - Wallet
+    type: object
+host: petstore.swagger.io
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: This is a sample server Petstore server.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Swagger Example API
+  version: "1.0"
+paths:
+  /GetAllAuctionHistory:
+    get:
+      consumes:
+      - application/json
+      description: Get tất cả dữ liệu ở bảng AuctionHistoryAll trả về  Json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.AuctionHistory'
+  /GetAllCategories:
+    get:
+      consumes:
+      - application/json
+      description: Get tất cả dữ liệu ở bảng Categories trả về  Json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Categorie'
+  /GetAllProduct:
+    get:
+      consumes:
+      - application/json
+      description: Get tất cả dữ liệu ở bảng GetProductAll trả về  Json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.Product'
+  /GetAllUser:
+    get:
+      consumes:
+      - application/json
+      description: Get tất cả dữ liệu ở bảng GetUserAll trả về  Json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/model.User'
+swagger: "2.0"

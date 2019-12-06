@@ -1,0 +1,8 @@
+{
+    "database": {
+       "user": "root",
+       "password": "123",
+       "database": "Auction",
+        "address": "45.118.145.149:8181"
+    }    
+}
