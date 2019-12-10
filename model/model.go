@@ -13,6 +13,12 @@ import (
 	jsoniter "github.com/json-iterator/go"
 )
 
+//Login ...
+type Login struct {
+	Email    string `json:"Email"`
+	Password int    `json:"Password"`
+}
+
 // Categorie .
 type Categorie struct {
 	ID             int    `json:"id"`
@@ -31,27 +37,27 @@ type AuctionHistory struct {
 // Product .
 type Product struct {
 	ID           int
-	ProductName  string    `form:"user" json:"ProductName" binding:"required"`
-	Description  string    `form:"user" json:"Description" binding:"required"`
-	ProductImage string    `form:"user" json:"ProductImage" binding:"required"`
-	CategoriesID int       `form:"user" json:"CategoriesID" binding:"required"`
-	PriceStart   int       `form:"user" json:"PriceStart" binding:"required"`
-	PriceNow     int       `form:"user" json:"PriceNow" binding:"required"`
-	StartTime    time.Time `form:"user" json:"StartTime" binding:"required"`
-	EndTime      time.Time `form:"user" json:"EndTime" binding:"required"`
-	Status       bool      `form:"user" json:"Status" binding:"required"`
+	ProductName  string    `json:"ProductName"`
+	Description  string    `json:"Description"`
+	ProductImage string    `json:"ProductImage"`
+	CategoriesID int       `json:"CategoriesID"`
+	PriceStart   int       `json:"PriceStart"`
+	PriceNow     int       `json:"PriceNow"`
+	StartTime    time.Time `json:"StartTime"`
+	EndTime      time.Time `json:"EndTime"`
+	Status       bool      `json:"Status"`
 }
 
 // User .
 type User struct {
-	ID        int    `form:"user" json:"Id" binding:"required"`
-	FisrtName string `form:"user" json:"FisrtName" binding:"required"`
-	LastName  string `form:"user" json:"LastName" binding:"required"`
-	Email     string `form:"user" json:"Email" binding:"required"`
-	Wallet    int    `form:"user" json:"Wallet" binding:"required"`
-	Phone     string `form:"user" json:"Phone" binding:"required"`
-	Role      bool   `form:"user" json:"Role" binding:"required"`
-	Password  string `form:"user" json:"Password" binding:"required"`
+	ID        int    `json:"Id"`
+	FisrtName string `json:"FisrtName"`
+	LastName  string `json:"LastName"`
+	Email     string `json:"Email"`
+	Wallet    int    `json:"Wallet"`
+	Phone     string `json:"Phone"`
+	Role      bool   `json:"Role"`
+	Password  int    `json:"Password"`
 }
 
 type Config struct {

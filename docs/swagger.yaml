@@ -28,6 +28,8 @@ definitions:
         type: string
       EndTime:
         type: string
+      PriceNow:
+        type: integer
       PriceStart:
         type: integer
       ProductImage:
@@ -44,6 +46,7 @@ definitions:
     - CategoriesID
     - Description
     - EndTime
+    - PriceNow
     - PriceStart
     - ProductImage
     - ProductName

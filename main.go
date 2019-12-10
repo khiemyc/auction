@@ -43,23 +43,26 @@ func main() {
 
 	url := ginSwagger.URL("http://localhost:8083/auction/doc.json") // The url pointing to API definition
 	r.GET("/auction/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, url))
-	
+	//http://localhost:8083/auction/index.html#/
 	//GetCategoriesAll
-	r.GET("/GetAllCategories", controller.GetCategoriesAll)
+	r.GET("/GetCategories", controller.GetCategoriesAll)
 	//GetAllAuctionHistory
-	r.GET("/GetAllAuctionHistory", controller.GetAuctionHistoryAll)
+	r.GET("/GetAuctionHistories", controller.GetAuctionHistoryAll)
 	//GetAllProduct
-	r.GET("/GetAllProduct", controller.GetAllProduct)
+	r.GET("/GetProducts", controller.GetAllProduct)
 	//GetAllUser
-	r.GET("/GetAllUser", controller.GetAllUser)
+	r.GET("/GetUsers", controller.GetAllUser)
 	//AddUser
-	r.POST("/UserAdd", controller.AddUser)
+	r.POST("/UserAdds", controller.AddUser)
 	//UpdateUser
-	r.POST("/UserUpdate", controller.UpdateUser)
+	r.POST("/UserUpdates", controller.UpdateUser)
 	//DeleteUser
-	r.POST("/UserDelete", controller.DeleteUser)
+	r.DELETE("/UserDeletes", controller.DeleteUser)
+	//AddProduct
+	r.POST("/AddProduct", controller.AddProduct)
+	//Login
+	r.POST("/Login", controller.Login)
 
-	r.POST("/AddCatergory", controller.AddCatergory)
 	// test
 	r.POST("/DeleteUser", controller.DeleteUser)
 	r.Run(":8083")

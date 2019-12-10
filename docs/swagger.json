@@ -121,6 +121,7 @@
                 "CategoriesID",
                 "Description",
                 "EndTime",
+                "PriceNow",
                 "PriceStart",
                 "ProductImage",
                 "ProductName",
@@ -136,6 +137,9 @@
                 },
                 "EndTime": {
                     "type": "string"
+                },
+                "PriceNow": {
+                    "type": "integer"
                 },
                 "PriceStart": {
                     "type": "integer"
