@@ -35,28 +35,31 @@ Cấu trúc các bảng trong database của project
 ## Cài đặt
 
 Repositories này chứa phần BackEnd của project bao gồm các Rest API.
-	- //AddAutionHistory
-	- r.POST("/AddAuctionHistory", controller.AddAuctionHistory)
-	- //AddCatetories
-	- r.POST("/AddCategories", controller.AddCatergory)
-	- //GetCategoriesAll
-	- r.GET("/GetCategories", controller.GetCategoriesAll)
-	- //GetAllAuctionHistory
-	- r.GET("/GetAuctionHistories", controller.GetAuctionHistoryAll)
-	- //GetAllProduct
-	- r.GET("/GetProducts", controller.GetAllProduct)
-	- //GetAllUser
-	- r.GET("/GetUsers", controller.GetAllUser)
-	- //AddUser
-	- r.POST("/UserAdds", controller.AddUser)
-	- //UpdateUser
-	- r.POST("/UserUpdates", controller.UpdateUser)
-	- //DeleteUser
-	- r.DELETE("/UserDeletes", controller.DeleteUser)
-	- //AddProduct
-	- r.POST("/AddProduct", controller.AddProduct)
-	- //Login
-	- r.POST("/Login", controller.Login)
+
+	```sh 
+	//AddAutionHistory
+	r.POST("/AddAuctionHistory", controller.AddAuctionHistory)
+	//AddCatetories
+	r.POST("/AddCategories", controller.AddCatergory)
+	//GetCategoriesAll
+	r.GET("/GetCategories", controller.GetCategoriesAll)
+	//GetAllAuctionHistory
+	r.GET("/GetAuctionHistories", controller.GetAuctionHistoryAll)
+	//GetAllProduct
+	r.GET("/GetProducts", controller.GetAllProduct)
+	//GetAllUser
+	r.GET("/GetUsers", controller.GetAllUser)
+	//AddUser
+	r.POST("/UserAdds", controller.AddUser)
+	//UpdateUser
+	r.POST("/UserUpdates", controller.UpdateUser)
+	//DeleteUser
+	r.DELETE("/UserDeletes", controller.DeleteUser)
+	//AddProduct
+	r.POST("/AddProduct", controller.AddProduct)
+	//Login
+	r.POST("/Login", controller.Login)
+	```
 
 2. Cài đặt các thư viện cần thiết
 ```sh
