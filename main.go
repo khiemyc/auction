@@ -44,6 +44,10 @@ func main() {
 	url := ginSwagger.URL("http://localhost:8083/auction/doc.json") // The url pointing to API definition
 	r.GET("/auction/*any", ginSwagger.WrapHandler(swaggerFiles.Handler, url))
 	//http://localhost:8083/auction/index.html#/
+	//AddAutionHistory
+	r.POST("/AddAuctionHistory", controller.AddAuctionHistory)
+	//AddCatetories
+	r.POST("/AddCategories", controller.AddCatergory)
 	//GetCategoriesAll
 	r.GET("/GetCategories", controller.GetCategoriesAll)
 	//GetAllAuctionHistory

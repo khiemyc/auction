@@ -58,6 +58,7 @@ func GetCategoriesAll(c *gin.Context) {
 	}
 	c.JSON(200, catergorysAll)
 }
+
 //GetAuctionHistoryAll ...GET all
 //AuctionHistoryAll ...Get all
 // @Description Get tất cả dữ liệu ở bảng AuctionHistoryAll trả về  Json
@@ -220,21 +221,6 @@ func DeleteUser(c *gin.Context) {
 // 	}
 // }
 
-func AddCatergory(c *gin.Context) {
-	config := model.SetupConfig()
-	db := model.ConnectDb(config.Database.User, config.Database.Password, config.Database.Database, config.Database.Address)
-	defer db.Close()
-	db.LogMode(true)
-
-	var newCatergory = model.Categorie{
-		// CategoryName: c.PostForm("catergorysName"),
-	}
-	errCreateCatergory := db.Create(&newCatergory).Error
-	if errCreateCatergory != nil {
-		log.Println(errCreateCatergory)
-		return
-	}
-}
 
 func GetNameCategories(c *gin.Context) {
 	// config := model.SetupConfig()
