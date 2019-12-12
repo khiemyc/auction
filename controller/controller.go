@@ -221,7 +221,6 @@ func DeleteUser(c *gin.Context) {
 // 	}
 // }
 
-
 func GetNameCategories(c *gin.Context) {
 	// config := model.SetupConfig()
 	// db := model.ConnectDb(config.Database.User, config.Database.Password, config.Database.Database, config.Database.Address)
@@ -274,8 +273,8 @@ func GetAllUser(c *gin.Context) {
 	defer db.Close()
 	db.LogMode(true)
 
-	var UserAll []model.User
-	errGetUser := db.Find(&UserAll).Error
+	var UserAll []model.UserList
+	errGetUser := db.Raw("SELECT * FROM `users`").Scan(&UserAll).Error
 	if errGetUser != nil {
 		log.Println(errGetUser)
 		return

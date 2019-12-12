@@ -4,13 +4,12 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"time"
 
 	"github.com/jinzhu/gorm"
 
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 
-	jsoniter "github.com/json-iterator/go" 
+	jsoniter "github.com/json-iterator/go"
 )
 
 //Login ...
@@ -27,25 +26,25 @@ type Categorie struct {
 
 // AuctionHistory .
 type AuctionHistory struct {
-	ID           int       `json:"id"`
-	ProductsID   int       `json:"productId"`
-	UsersID      int       `json:"userId"`
-	BiddingPrice int       `json:"biddingPrice"`
-	TimeToBid    time.Time `json:"timeToBid"`
+	ID           int    `json:"id"`
+	ProductsID   int    `json:"productsId"`
+	UsersID      int    `json:"usersId"`
+	BiddingPrice int    `json:"biddingPrice"`
+	TimeToBid    string `json:"timeToBid"`
 }
 
 // Product .
 type Product struct {
-	ID           int
-	ProductName  string    `json:"ProductName"`
-	Description  string    `json:"Description"`
-	ProductImage string    `json:"ProductImage"`
-	CategoriesID int       `json:"CategoriesID"`
-	PriceStart   int       `json:"PriceStart"`
-	PriceNow     int       `json:"PriceNow"`
-	StartTime    time.Time `json:"StartTime"`
-	EndTime      time.Time `json:"EndTime"`
-	Status       bool      `json:"Status"`
+	ID           int    `json:"id"`
+	ProductName  string `json:"productName"`
+	Description  string `json:"description"`
+	ProductImage string `json:"productImage"`
+	CategoriesID int    `json:"Category"`
+	PriceStart   int    `json:"priceStart"`
+	PriceNow     int    `json:"buyPrice"`
+	StartTime    string `json:"startTime"`
+	EndTime      string `json:"endTime"`
+	Status       bool   `json:"Sold"`
 }
 
 // User .
@@ -58,6 +57,17 @@ type User struct {
 	Phone     string `json:"Phone"`
 	Role      bool   `json:"Role"`
 	Password  int    `json:"Password"`
+}
+
+// userList
+type UserList struct {
+	FisrtName string `json:"fisrtName"`
+	LastName  string `json:"lastName"`
+	Email     string `json:"email"`
+	Phone     string `json:"Phone"`
+	Wallet    int    `json:"Wallet"`
+	Role      bool   `json:"role"`
+	ID        int    `json:"id"`
 }
 
 type Config struct {
